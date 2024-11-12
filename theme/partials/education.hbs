@@ -12,19 +12,21 @@
       {{/if}}
       <header class="clear">
         <div class="date">
+          {{#if startDate && endDate }}
           {{#if startDate}}
           <span class="startDate">
-          {{Y startDate}}
+            {{Y startDate}}
           </span>
           {{/if}}
           {{#if endDate}}
           <span class="endDate">
-          - {{Y endDate}}
+            - {{Y endDate}}
           </span>
           {{else}}
           <span class="endDate">
-          - Current
+            - Current
           </span>
+          {{/if}}
           {{/if}}
         </div>
         <div class="header-left">

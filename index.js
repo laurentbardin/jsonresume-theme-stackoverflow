@@ -35,6 +35,8 @@ function render(resume) {
     Handlebars.registerPartial(name, template);
   });
 
+  checkDates(resume.education)
+
   return Handlebars.compile(tpl)({
     css,
     resume,
@@ -49,6 +51,16 @@ const pdfRenderOptions = {
     left: marginValue,
     right: marginValue,
   }
+}
+
+function checkDates(data) {
+  data.forEach(function (elt, id, d) {
+    if (elt.startDate && elt.endDate) {
+      d[id].showDates = true
+    } else {
+      d[id].showDates = false
+    }
+  })
 }
 
 module.exports = { render, pdfRenderOptions };

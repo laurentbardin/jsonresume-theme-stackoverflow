@@ -347,7 +347,7 @@ section .location {
 .institution::before,
 .organization::before,
 .awarder::before {
-  content: "at ";
+  content: "| ";
 }
 
 .company,
@@ -618,12 +618,12 @@ section .location {
   .section > section:not(.main-summary) {
     margin-left: 1.67rem;
   }
-  .company::before,
+  /*.company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "| ";
-  }
+  }*/
   .header-left {
     float: left;
     width: 70%;
@@ -657,12 +657,12 @@ section .location {
   .item-count {
     display: none;
   }
-  .company::before,
+  /*.company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "at ";
-  }
+  }*/
   .main-summary {
     padding: 0;
     background: transparent;
@@ -720,9 +720,9 @@ section .location {
   .highlights {
     margin: 0.5em 0 0 0;
   }
-  ul.keywords::before {
+  /*ul.keywords::before {
     content: "Skills acquired: ";
-  }
+  }*/
   #skills .keywords::before {
     content: none;
   }
@@ -730,9 +730,9 @@ section .location {
     margin: 0;
     padding: 0;
   }
-  ul.courses::before {
+  /*ul.courses::before {
     content: "Major courses: ";
-  }
+  }*/
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
     content: "";

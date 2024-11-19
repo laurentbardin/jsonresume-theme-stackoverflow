@@ -1,6 +1,7 @@
 const Handlebars = require('handlebars');
 const { readFileSync, readdirSync } = require('fs');
 const { join } = require('path');
+const moment = require('moment');
 
 const HELPERS = join(__dirname, 'theme/hbs-helpers');
 
@@ -25,6 +26,8 @@ function render(resume) {
   const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
   const partialsDir = join(__dirname, 'theme/partials');
   const filenames = readdirSync(partialsDir);
+
+  moment.locale(resume.meta.lang)
 
   filenames.forEach((filename) => {
     const matches = /^([^.]+).hbs$/.exec(filename);

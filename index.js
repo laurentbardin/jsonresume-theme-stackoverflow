@@ -25,7 +25,7 @@ function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
   const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
   const lang = resume.meta.lang
-  const partialsDir = join(__dirname, 'theme/' + (lang === undefined ? "" : lang + "/") + 'partials');
+  const partialsDir = join(__dirname, 'theme/partials' + (lang === undefined ? "" : '/' + lang));
   const filenames = readdirSync(partialsDir);
 
   if (lang !== undefined) {

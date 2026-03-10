@@ -180,6 +180,14 @@ h3 {
 
 em {
   color: #757575;
+  a & {
+    color: #0095ff;
+    text-decoration: none;
+  }
+  a:hover & {
+    color: #0c65a5;
+    text-decoration: underline;
+  }
 }
 
 strong {

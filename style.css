@@ -261,7 +261,7 @@ section .location {
 }
 
 #header .image {
-  width: 11em;
+  width: 10em;
   float: right;
   border-radius: 50%;
 }
